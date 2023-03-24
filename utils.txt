@@ -1,0 +1,43 @@
+crianco venv e usando 
+
+python3 -m venv myvenv
+source myvenv/bin/activate
+
+instalar pacote dependente do mysql no sistema
+sudo apt-get install libmysqlclient-dev
+
+
+install pacotes com requirements.txt
+
+pip3 install -r  requirements.txt
+
+instalando mysql com um volume apontando para maquina local com docker.
+
+docker run --name mysql-data-platform-manager e MYSQL_ROOT_PASSWORD=admin -v /home/felipe/Desktop/mysql-data-platform-manager:/var/lib/mysql -p 3306:3306 -d mysql: latest
+
+
+
+criando um novo app dentro do projeto django
+
+
+mkdir apps
+mkdir apps/processes_control
+python manage.py startapp processes_control ./apps/processes_control
+
+
+
+python manage.py startapp processes_control
+
+
+
+python manage.py startapp apps/processes_control
+
+
+criando rota 
+touch apps/processes_control/urls.py
+
+
+
+startar o servidor
+
+$ python3 manage.py runserver
